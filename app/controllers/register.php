@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (Auth::Register($username, $email, $salt, $verifier)){
-      echo "<div class='alert alert-success' role='alert'> Congratulations! Account <b>{$username}</b> was created. </div>";
+      echo "<div class='alert alert-success' role='alert'> Congratulations! Account <b>" . htmlspecialchars($username) . "</b> was created. </div>";
       return;
     }
 }

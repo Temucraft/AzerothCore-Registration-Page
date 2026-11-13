@@ -1,10 +1,10 @@
 RewriteEngine On
 
 # Set the base folder for the project (adjust this if your folder name is different)
-RewriteBase /AzerothCore-Registration-Page/
+RewriteBase /
 
 # Custom 404 Page
-ErrorDocument 404 /AzerothCore-Registration-Page/app/errors/404.php
+ErrorDocument 404 /app/errors/404.php
 
 # Allow direct access to existing files and directories
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -1,6 +1,6 @@
 <?php
-$message = $_GET['error_message'];
-$code = $_GET['error_code'];
+$message = $_GET["error_message"] ?? "";
+$code = $_GET["error_code"] ?? "";
 ?>
 
 <?php require_once __DIR__ . '/../../config.php'; ?>
@@ -23,8 +23,8 @@ $code = $_GET['error_code'];
               <button id="themeToggle" type="button" class="btn btn-outline-secondary btn-sm">Toggle Theme</button>
             </div>
             <div class="card-body">
-              <h2>Error code: <?= $code ?></h2>
-              <p>Error message: <?= $message ?></p>
+              <h2>Error code: <?= htmlspecialchars((string) $code) ?></h2>
+              <p>Error message: <?= htmlspecialchars((string) $message) ?></p>
               <hr class="mb-5">   
               <a href="../../index.php" id="backBtn" class="btn">Go back</a>
             </div>

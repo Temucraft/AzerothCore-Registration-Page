@@ -3,8 +3,8 @@
 <?php
 // Database Constants
 $host = "127.0.0.1"; // Database Host
-$user = "acore"; // Database Username
-$pass = "acore"; // Database Password
+$user = getenv("REG_DB_USER"); // Database Username, set in /etc/apache2/sites-available/register.conf
+$pass = getenv("REG_DB_PASS"); // Database Password, set in /etc/apache2/sites-available/register.conf
 $db = "acore_auth"; // Database Name
 
 // Username and Password min/max length constants, default values are client limit.
@@ -14,13 +14,13 @@ define('PASSWORD_MIN_LENGTH', 1);
 define('PASSWORD_MAX_LENGTH', 16);
 
 // true = enable e-mail usage | false = disable e-mail usage.
-define('EMAIL_ENABLED', true);
+define('EMAIL_ENABLED', false);
 
 // Theme: 'dark' or 'light'
 define('DEFAULT_THEME', 'dark');
 
 // Website Constants
-$title = "AzerothCore | Registration Page"; // Website Title
+$title = "Temucraft | Registration Page"; // Website Title
 $slogan = "Create your Account"; // Website Slogan
 $description = "Fill in all the inputs in the form bellow in order to register."; // Website Description
 
