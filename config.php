@@ -3,8 +3,8 @@
 <?php
 // Database Constants
 $host = "127.0.0.1"; // Database Host
-$user = getenv("REG_DB_USER"); // Database Username, set in /etc/apache2/sites-available/register.conf
-$pass = getenv("REG_DB_PASS"); // Database Password, set in /etc/apache2/sites-available/register.conf
+$user = getenv("REG_DB_USER"); // Database Username, from /var/www/register.env
+$pass = getenv("REG_DB_PASS"); // Database Password, from /var/www/register.env
 $db = "acore_auth"; // Database Name
 
 // Username and Password min/max length constants, default values are client limit.
