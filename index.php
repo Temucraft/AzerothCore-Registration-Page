@@ -38,6 +38,7 @@ try {
               <hr class="mb-5">
 
               <?php include 'app/controllers/register.php' ?>
+              <?php if (REGISTRATION_ENABLED): ?>
               <form action="" method="post">
                 <div class="form-group row mb-3">
                   <label for="username" class="col-sm-3 col-form-label">Username</label>
@@ -85,6 +86,7 @@ try {
 
                 <button type="submit" id="submit" class="btn btn-primary float-end" disabled>Register</button>
               </form>
+              <?php endif; ?>
             </div>
             <small class="text-center">
               Made with 
@@ -104,7 +106,9 @@ try {
       const PASSWORD_MAX_LENGTH = <?= PASSWORD_MAX_LENGTH ?>;
       const EMAIL_ENABLED = <?= EMAIL_ENABLED ? 'true' : 'false' ?>;
     </script>
+    <?php if (REGISTRATION_ENABLED): ?>
     <script src="assets/js/script.js"></script>
+    <?php endif; ?>
     <script>
       // Theme logic
       const DEFAULT_THEME = "<?= strtolower(DEFAULT_THEME) ?>";

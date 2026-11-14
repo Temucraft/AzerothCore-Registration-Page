@@ -1,4 +1,9 @@
 <?php
+if (!REGISTRATION_ENABLED) {
+    echo "<div class='alert alert-warning' role='alert'>Account creation is disabled at this time.</div>";
+    return;
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Obtain and filter the inputs
     $username = filter_var($_POST['username']);

@@ -13,6 +13,9 @@ define('USERNAME_MAX_LENGTH', 17);
 define('PASSWORD_MIN_LENGTH', 1);
 define('PASSWORD_MAX_LENGTH', 16);
 
+// Account creation on/off, REG_ENABLED in /var/www/register.env (default on)
+define('REGISTRATION_ENABLED', getenv("REG_ENABLED") !== "0");
+
 // true = enable e-mail usage | false = disable e-mail usage.
 define('EMAIL_ENABLED', false);
 
